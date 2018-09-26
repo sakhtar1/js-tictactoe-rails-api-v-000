@@ -55,12 +55,11 @@ function checkWinner() {
 }
 
 function updateState(square) {
-  var token = player();
-  $(square).text(token);
+  $(square).html(player());
 }
 
-function setMessage(string) {
-  $('#message').text(string);
+function setMessage(message) {
+  $('#message').html(message);
 }
 
 function saveGame() {
