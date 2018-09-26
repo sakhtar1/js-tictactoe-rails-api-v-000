@@ -87,7 +87,7 @@ function saveGame() {
   }
 }
 
-function showPreviousGames() {
+function previousGames() {
   $('#games').empty();
   $.get('/games', (savedGames) => {
     if (savedGames.data.length) {
@@ -139,6 +139,6 @@ function attachListeners() {
   });
 
   $('#save').on('click', () => saveGame());
-  $('#previous').on('click', () => showPreviousGames());
+  $('#previous').on('click', () => PreviousGames());
   $('#clear').on('click', () => resetBoard());
 }
